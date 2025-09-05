@@ -3,7 +3,7 @@
 ## Prerequisites
 - AWS CLI configured
 - Terraform installed
-- Python 3 installed
+- java 17 installed
 - kubectl installed
 - Docker installed
 - Docker Hub account
@@ -11,15 +11,14 @@
 ## Steps
 
 ### 1. Full Setup
+**create the cluster using Terraform**
+cd /terraform
+terraform init 
+terraform apploy --auto-approvre 
 
-python scripts/setup_all.py
-
-This script will perform below actions:
-
-1. Create the EKS cluster with Terraform
-2. Deploy Jenkins to Kubernetes
-3. Build & push initial Blue and Green images
-4. Deploy Blue & Green deployments
+1. Deploy Jenkins to Kubernetes
+2. Build & push initial Blue and Green images
+3. Deploy Blue & Green deployments
 5. Point service to Blue initially
 
 
